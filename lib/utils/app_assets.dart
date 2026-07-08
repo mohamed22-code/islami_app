@@ -14,4 +14,7 @@ class AppAssets {
   static const String sebhaBg = 'assets/images/sebha_bg.png';
   static const String timeBg = 'assets/images/time_bg.png';
   static const String vector = 'assets/images/Vector.png';
+  static const String leftCorner = 'assets/images/left_corner.png';
+  static const String rightCorner = 'assets/images/right_corner.png';
+  static const String hadethMosquo = 'assets/images/bottom_background.png';
 }
