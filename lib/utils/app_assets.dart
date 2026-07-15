@@ -17,4 +17,11 @@ class AppAssets {
   static const String leftCorner = 'assets/images/left_corner.png';
   static const String rightCorner = 'assets/images/right_corner.png';
   static const String hadethMosquo = 'assets/images/bottom_background.png';
+  static const String sebhaHead = 'assets/images/Mask group.png';
+  static const String sebhaBody = 'assets/images/SebhaBody 1.png';
+  static const String page1 = 'assets/images/page1.png';
+  static const String page2 = 'assets/images/page2.png';
+  static const String page3 = 'assets/images/page3.png';
+  static const String page4 = 'assets/images/page4.png';
+  static const String page5 = 'assets/images/page5.png';
 }

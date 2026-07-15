@@ -9,7 +9,7 @@ import 'package:provider/provider.dart';
 import '../utils/app_styles.dart';
 
 class MostRecentlyWidget extends StatefulWidget {
-   MostRecentlyWidget({super.key});
+  MostRecentlyWidget({super.key});
 
   @override
   State<MostRecentlyWidget> createState() => _MostRecentlyWidgetState();
@@ -23,14 +23,14 @@ class _MostRecentlyWidgetState extends State<MostRecentlyWidget> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       mostRecentProvider.readMostRecentList();
-    },);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
-     mostRecentProvider = Provider.of<MostRecentProvider>(context);
+    mostRecentProvider = Provider.of<MostRecentProvider>(context);
     return Visibility(
       visible: mostRecentProvider.mostRecentList.isNotEmpty,
       child: Column(
@@ -55,9 +55,24 @@ class _MostRecentlyWidgetState extends State<MostRecentlyWidget> {
                         mainAxisAlignment: .center,
                         crossAxisAlignment: .start,
                         children: [
-                          Text(QuranResources.englishQuranSuraList[mostRecentProvider.mostRecentList[index]], style: AppStyles.bold24black),
-                          Text(QuranResources.arabicQuranSuraList[mostRecentProvider.mostRecentList[index]], style: AppStyles.bold24black),
-                          Text('${QuranResources.versesNumberList[mostRecentProvider.mostRecentList[index]]} verse', style: AppStyles.bold14black),
+                          Text(
+                            QuranResources
+                                .englishQuranSuraList[mostRecentProvider
+                                .mostRecentList[index]],
+                            style: AppStyles.bold24black,
+                          ),
+                          Text(
+                            QuranResources
+                                .arabicQuranSuraList[mostRecentProvider
+                                .mostRecentList[index]],
+                            style: AppStyles.bold24black,
+                          ),
+                          Text(
+                            '${QuranResources.versesNumberList[
+                              mostRecentProvider.mostRecentList[index]
+                            ]} verse',
+                            style: AppStyles.bold14black,
+                          ),
                         ],
                       ),
                       Image.asset(AppAssets.reading, color: Colors.black),
@@ -65,7 +80,8 @@ class _MostRecentlyWidgetState extends State<MostRecentlyWidget> {
                   ),
                 );
               },
-              separatorBuilder: (context, index) => SizedBox(width: width * 0.02),
+              separatorBuilder: (context, index) =>
+                  SizedBox(width: width * 0.02),
               itemCount: mostRecentProvider.mostRecentList.length,
             ),
           ),
